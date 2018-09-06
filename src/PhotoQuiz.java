@@ -33,30 +33,45 @@ quizWindow.add(jail);
 quizWindow.pack();
 		// 6. ask a question that relates to the image
 int YesNo = JOptionPane.showOptionDialog(null,
-		"If he asked you to change his diapper what your response be?", "Diapper Changing?", 0,
+		"At a party would you get on the dance floor and party with the Puppy Monkey Baby", "Dance Party?", 0,
 		JOptionPane.INFORMATION_MESSAGE, null,
-new String[] { "Run away in horror!", "Help the poor man out, then dance with him after." }, null);
+new String[] { "NO WAY! I am not getting close to that thing!", "Start to dance and have a good time!" }, null);
 		// 7. print "CORRECT" if the user gave the right answer
 if(YesNo==0) {
-	System.out.println("You monster!");
+	System.out.println("Buzz Kill!");
+	System.out.println("INCORRECT");
 }
 else {
-	System.out.println("Good choice!");
+	System.out.println("Way to get down and cut some rug!");
+	System.out.println("CORRECT");
 }
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 quizWindow.remove(jail);
 		// 10. find another image and create it (might take more than one line of code)
-
+String Narwhal="http://preview.turbosquid.com/Preview/2014/07/07__23_22_22/Narwhal3.jpgde5cc6d8-5985-4214-b9dd-36d7af50965aOriginal.jpg";
 		// 11. add the second image to the quiz window
-
+jail=createImage(Narwhal);
+quizWindow.add(jail);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+int yes = JOptionPane.showOptionDialog(null,
+"Are Narwhals real?", "Fact or Fiction?", 0,
+JOptionPane.INFORMATION_MESSAGE, null,
+new String[] { "Nope, just fancy PhotoShop skills!", "They are the unicorns of the sea, except they are real." }, null);
 		// 14+ check answer, say if correct or incorrect, etc.
-
+if(yes==0) {
+	System.out.println("Take off your tinfoil hat and try again!");
+	System.out.println("INCORRECT");
+}
+else {
+	System.out.println("They are the unicorns of the sea!");
+	System.out.println("CORRECT");
+}
+quizWindow.dispose();
+System.out.println("Score: " +( YesNo+yes));
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
@@ -68,6 +83,7 @@ quizWindow.remove(jail);
 
 	/* OPTIONAL */
 	// *14. add scoring to your quiz
+	
 	// *15. make something happen when mouse enters image (imageComponent.addMouseMotionListener()) 
 }
 
