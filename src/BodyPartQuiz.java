@@ -31,26 +31,63 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+int score=0;
+String arnold = "arnold schwarzenegger";
+String leo = "leonardo dicaprio";
+String morgan = "morgan freeman";
+String jack = "jack black";
 		// 2. Set the size of the window in the initializeGui() method below
 
 		for (int i = 0; i < 4; i++) {
 			
 			// 4. Ask the user who this person is and store their answer
-			String guess= JOptionPane.showInputDialog("who is this?");
+			String guess= JOptionPane.showInputDialog("Who is this?").toLowerCase();
 			
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
-
+if(guess.equals(arnold) ){
+	score++;
+	JOptionPane.showMessageDialog(null, "Correct, your score has been increased by one point");
+}
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
-
+else {
+	System.out.println("Incorrect, your score will stay the same!");
+}
 			// 7. Use the showNextImage() method below to get the next image
 			showNextImage();
 		    // 8. Show them their current score
 			
 			// 9. .... repeat for all your images.....
-
+			if(guess.equals(leo)) {
+				
+				score++;
+				JOptionPane.showMessageDialog(null, "Correct, your score has been increased by one point");
+			}
+						// 6. Otherwise:
+						// -- Tell them they are wrong and who the person is
+			else {
+				System.out.println("Incorrect, your score will stay the same!");
+			}
+			if(guess.equals(morgan)) {
+				score++;
+				JOptionPane.showMessageDialog(null, "Correct, your score has been increased by one point");
+			}
+						// 6. Otherwise:
+						// -- Tell them they are wrong and who the person is
+			else {
+				System.out.println("Incorrect, your score will stay the same!");
+			}
+			if(guess.equals(jack)) {
+				score++;
+				JOptionPane.showMessageDialog(null, "Correct, your score has been increased by one point");
+			}
+						// 6. Otherwise:
+						// -- Tell them they are wrong and who the person is
+			else {
+				System.out.println("Incorrect, your score will stay the same!");
+			}
+			JOptionPane.showMessageDialog(null, "You have " + score + " point(s)!");
 
 		}
 
