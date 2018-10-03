@@ -10,12 +10,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class JackInTheBox implements ActionListener {
-	int pressed=0;
-	public static void main(String[] args) {
+	static int pressed=0;
+	public static void main(String[] args) 
+	
+	{
 JackInTheBox jack= new JackInTheBox();
 	jack.showButton();
+	
 	}
 	public void showButton (){
+		
 		JFrame frame = new JFrame();
 		JButton surprise = new JButton();
 		frame.add(surprise);
@@ -23,7 +27,7 @@ JackInTheBox jack= new JackInTheBox();
 		surprise.addActionListener(this);
 		surprise.setText("Surprise!");
 	}
-	private void showPicture(String fileName) {
+	private  void showPicture(String fileName) {
 	    try {
 	         JLabel imageLabel = createLabelImage(fileName);
 	         JFrame frame = new JFrame();
@@ -36,7 +40,7 @@ JackInTheBox jack= new JackInTheBox();
 	    }
 	}
 	
-	private JLabel createLabelImage(String fileName) {
+	private  JLabel createLabelImage(String fileName) {
 	    try {
 	         java.net.URL imageURL = getClass().getResource(fileName);
 	         if (imageURL == null) {
@@ -59,6 +63,9 @@ JackInTheBox jack= new JackInTheBox();
 		
 		pressed++;
 			System.out.println("Button Pressed " + pressed + " times!");
+			if(pressed==5) {
+				showPicture( "jackInTheBox.png");
+			}
 		
 	}
 }
