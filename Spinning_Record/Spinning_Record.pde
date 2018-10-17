@@ -6,9 +6,9 @@ AudioPlayer song;
 void setup(){
   size(768,743);
   pictureOfRecord= loadImage("Record.jpg");
-  pictureOfRecord.resize(width,height);    
+  pictureOfRecord.resize(768,743);    
    minim = new Minim(this);
-   song = minim.loadFile("awesomeTrack.mp3", 512);
+   song = minim.loadFile("Justin Bieber - Baby.mp3", 512);
    
 }
 void draw(){
