@@ -40,7 +40,9 @@
     fill(75, 156, 211);
   stroke(75, 156, 211);
   ellipse(randomNumber, y, 10, 30);
-   
+   fill(146,146,146);
+  stroke(146,146,146);
+    rect( mouseX,  565,  50, 65); 
    fill(255, 255, 255);
 textSize(16);
 text("Score: " + score, 10, 15);
